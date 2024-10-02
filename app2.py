@@ -7,6 +7,7 @@ from transformers import BertModel
 from kobert_tokenizer import KoBERTTokenizer
 import nltk
 from collections import Counter
+from flask_cors import CORS
 
 nltk.download('punkt')
 
@@ -42,6 +43,7 @@ class BERTDataset(Dataset):
 emotion_labels = ["불안", "당황", "분노", "슬픔", "일상", "행복", "혐오"]
 
 app = Flask(__name__)
+CORS(app)  # 모든 도메인에서 요청 허용
 
 tokenizer = KoBERTTokenizer.from_pretrained('skt/kobert-base-v1')
 bert = BertModel.from_pretrained('skt/kobert-base-v1')
