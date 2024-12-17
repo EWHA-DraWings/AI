@@ -43,10 +43,11 @@
 - 사용 데이터: 감성 대화 말뭉치(https://aihub.or.kr/aihubdata/data/view.do?currMenu=115&topMenu=100&aihubDataSe=realm&dataSetSn=86) & 감정 분류를 위한 대화 음성 데이터(https://www.aihub.or.kr/aihubdata/data/view.do?currMenu=115&topMenu=100&dataSetSn=263)
 - Flask
 
-
+<br><br>
 ## Source 코드 설명
 - ```모델 생성```: https://github.com/EWHA-DraWings/Submit/blob/main/%EC%86%8C%EB%8B%B4_%EA%B0%90%EC%A0%95%EB%B6%84%EC%84%9D.ipynb을 참고하세요.
 - ```app.py```: input으로 들어온 일기를 문장 단위로 나누어 각 문장에 대해 감정을 분석하고 비율을 계산합니다. 이후 상위 3개의 감정과 비율을 반환합니다.
+<br><br>
 
 ## How to build & Install🔨
 1. Ubuntu 서버 접속
@@ -96,11 +97,12 @@ git clone https://github.com/EWHA-DraWings/BE.git
 git pull origin main # 최신 코드 pull
 ```
 
-4. app 실행
+5. app 실행
 ```
 python3 app.py
 ```
 
+<br><br>
 ## How to test📜
 1. APK 테스트는 https://github.com/EWHA-DraWings/FE의 README를 참고해주세요.
 2. 로컬 플라스크 서버 실행 후, http://localhost:5000/predict 를 End Point로 감정 분석 요청하는 방식으로 테스트 가능합니다.
